@@ -13,7 +13,7 @@ def read_pgm(file_path):
         for i in range(100 * 40):
             byte = image.read(1)
             result.append(int.from_bytes(byte, sys.byteorder))
-    return result
+    return np.reshape(result, (40, 100, 1))
 
 
 def show_image(image):
